@@ -3,10 +3,11 @@
 import numpy as np
 from numpy.random import randn
 
-n = input("How many numbers you want to generate?:\t")
+n = int(input("How many numbers you want to generate?:\t"))
 counter = 0
 for i in randn(n):
     if -1 < i < 1:
         counter += 1
 hit_ratio = counter / n
-print(f"{hit_ratio} numbers fall between -1 and 1 for {n}.")
+hit_ratio_per=hit_ratio*100
+print(f"{hit_ratio} i.e. {hit_ratio_per}% numbers fall between -1 and 1 for {n}.")
