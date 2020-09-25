@@ -28,5 +28,6 @@ def compare_for_inputs(input_1, input_2):
 
 
 in_1 = input_for_lln()
+
 in_2 = input_for_lln()
 compare_for_inputs(in_1, in_2)
