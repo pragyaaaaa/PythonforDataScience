@@ -22,10 +22,15 @@ Data:
 revenue = [14574.49, 7606.46, 8611.41, 9175.41, 8058.65, 8105.44, 11496.28, 9766.09, 10305.32, 14379.96, 10713.97, 15433.50]
 expenses = [12051.82, 5695.07, 12319.20, 12089.72, 8658.57, 840.20, 3285.73, 5821.12, 6976.93, 16618.61, 10054.37, 3803.96]
 '''
-revenue = [14574.49, 7606.46, 8611.41, 9175.41, 8058.65, 8105.44, 11496.28, 9766.09, 10305.32, 14379.96, 10713.97,
-           15433.50]
-expenses = [12051.82, 5695.07, 12319.20, 12089.72, 8658.57, 840.20, 3285.73, 5821.12, 6976.93, 16618.61, 10054.37,
-            3803.96]
+import numpy as np
+from numpy import array
+
+rev = [14574.49, 7606.46, 8611.41, 9175.41, 8058.65, 8105.44, 11496.28, 9766.09, 10305.32, 14379.96, 10713.97,
+       15433.50]
+exp = [12051.82, 5695.07, 12319.20, 12089.72, 8658.57, 840.20, 3285.73, 5821.12, 6976.93, 16618.61, 10054.37,
+       3803.96]
+revenue = np.array(rev)
+expenses = np.array(exp)
 months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
 good_months = []
 bad_months = []
@@ -42,15 +47,15 @@ mean_profit = total_monthly_profit_after_tax / 12
 max_profit = max(monthly_profit_after_tax)
 min_profit = min(monthly_profit_after_tax)
 for i in range(0, len(monthly_profit_after_tax)):
-    if monthly_profit_after_tax > mean_profit:
+    if monthly_profit_after_tax[i] > mean_profit:
         good_months.append(months[i] + " ")
     else:
         bad_months.append(months[i] + " ")
 
 for i in range(0, len(monthly_profit_after_tax)):
-    if monthly_profit_after_tax == max_profit:
+    if monthly_profit_after_tax[i] == max_profit:
         best_months.append(months[i] + " ")
-    elif monthly_profit_after_tax == min_profit:
+    elif monthly_profit_after_tax[i] == min_profit:
         worst_months.append(months[i] + " ")
 
 print(f"""Monthly Profit: {monthly_profit}
