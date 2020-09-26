@@ -38,14 +38,18 @@ best_months = []
 worst_months = []
 monthly_profit = []
 monthly_profit_after_tax = []
+profit_after_margin = []
 for i in range(0, len(revenue)):
-    monthly_profit.append(revenue[i] - expenses[i])
-    monthly_profit_after_tax.append(revenue[i] - (expenses[i] + (0.3 * expenses[i])))
+    monthly_profit.append(round((revenue[i] - expenses[i]), 2))
+    monthly_profit_after_tax.append(round((revenue[i] - (expenses[i] + (0.3 * expenses[i]))), 2))
 
 total_monthly_profit_after_tax = sum(monthly_profit_after_tax)
-mean_profit = total_monthly_profit_after_tax / 12
-max_profit = max(monthly_profit_after_tax)
-min_profit = min(monthly_profit_after_tax)
+mean_profit = round((total_monthly_profit_after_tax / 12), 2)
+max_profit = round((max(monthly_profit_after_tax)), 2)
+min_profit = round((min(monthly_profit_after_tax)), 2)
+for i in range(0, len(monthly_profit_after_tax)):
+    profit_after_margin.append(months[i] + ": " + str(round((monthly_profit_after_tax[i] / revenue[i]), 2)))
+
 for i in range(0, len(monthly_profit_after_tax)):
     if monthly_profit_after_tax[i] > mean_profit:
         good_months.append(months[i] + " ")
@@ -67,4 +71,5 @@ Good months: {good_months}
 Bad months: {bad_months}
 Best month(s): {best_months}
 Worst month(s): {worst_months}
+Profit after margin: {profit_after_margin}
 """)
