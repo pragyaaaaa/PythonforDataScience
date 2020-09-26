@@ -1,7 +1,7 @@
 # Analysing the trend of top 10 basketball players over 10 years
-import numpy as np
-from DataSets import BasketballDataSet as d
 import matplotlib.pyplot as plt
+
+from DataSets import BasketballDataSet as d
 
 salary = d.Salary
 seasons = d.Seasons
