@@ -52,3 +52,14 @@ for i in range(0, len(monthly_profit_after_tax)):
         best_months.append(months[i] + " ")
     elif monthly_profit_after_tax == min_profit:
         worst_months.append(months[i] + " ")
+
+print(f"""Monthly Profit: {monthly_profit}
+Monthly profit after tax: {monthly_profit_after_tax}
+Mean profit after tax: {mean_profit}
+Maximum Profit: {max_profit}
+Minimum profit: {min_profit}
+Good months: {good_months}
+Bad months: {bad_months}
+Best month(s): {best_months}
+Worst month(s): {worst_months}
+""")
