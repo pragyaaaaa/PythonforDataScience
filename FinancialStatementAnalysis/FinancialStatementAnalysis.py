@@ -73,3 +73,29 @@ Best month(s): {best_months}
 Worst month(s): {worst_months}
 Profit after margin: {profit_after_margin}
 """)
+print("After converting calculations to units of $1000: ")
+revenue_1000 = [round(i / 1000, 2) for i in revenue]
+revenue_1000_fmtd = [("$" + str(revenue_1000[i]) + "K") for i in range(0, len(revenue_1000))]
+expenses_1000 = [round(i / 1000, 2) for i in expenses]
+expenses_1000_fmtd = [("$" + str(expenses_1000[i]) + "K") for i in range(0, len(expenses_1000))]
+profit_1000 = [round(i / 1000, 2) for i in monthly_profit]
+profit_1000_fmtd = [(months[i] + ": $" + str(profit_1000[i]) + "K") for i in range(0, len(profit_1000))]
+profit_after_tax_1000 = [round(i / 1000, 2) for i in monthly_profit_after_tax]
+profit_after_tax_1000_fmtd = [(months[i] + ": $" + str(profit_after_tax_1000[i]) + "K") for i in
+                              range(0, len(profit_after_tax_1000))]
+profit_after_margin_1000 = [round(i / 1000, 2) for i in range(0, len(profit_after_margin))]
+profit_after_margin_1000_fmtd = [(months[i] + ": $" + str(profit_after_margin_1000[i]) + "K") for i in
+                                 range(0, len(profit_after_margin_1000))]
+mean_profit_1000 = "$" + str(round((mean_profit / 1000), 2)) + "K"
+max_profit_1000 = "$" + str(round((max_profit / 1000), 2)) + "K"
+min_profit_1000 = "$" + str(round((min_profit / 1000), 2)) + "K"
+
+print(f"""Monthly expenses: {expenses_1000_fmtd}
+Monthly revenue: {revenue_1000_fmtd}
+Monthly profit: {profit_1000_fmtd}
+Monthly profit after tax: {profit_after_tax_1000_fmtd}
+Monthly profit after margin: {profit_after_margin_1000_fmtd}
+Mean profit after tax: {mean_profit_1000}
+Maximum Profit: {max_profit_1000}
+Minimum profit: {min_profit_1000}
+""")
