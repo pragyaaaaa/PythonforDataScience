@@ -163,6 +163,8 @@ KevinDurant_FT = [209, 209, 391, 452, 756, 594, 431, 679, 703, 146]
 DerrickRose_FT = [146, 146, 146, 197, 259, 476, 194, 0, 27, 152]
 DwayneWade_FT = [629, 432, 354, 590, 534, 494, 235, 308, 189, 284]
 
+Free_Throws = np.array([KobeBryant_FT, JoeJohnson_FT, LeBronJames_FT, CarmeloAnthony_FT, DwightHoward_FT, ChrisBosh_FT,
+                   ChrisPaul_FT, KevinDurant_FT, DerrickRose_FT, DwayneWade_FT])
 # Free Throw Attempts
 KobeBryant_FTA = [819, 768, 742, 564, 541, 583, 451, 626, 21, 241]
 JoeJohnson_FTA = [330, 314, 379, 362, 269, 243, 186, 161, 195, 176]
@@ -174,3 +176,6 @@ ChrisPaul_FTA = [465, 357, 390, 524, 190, 384, 302, 323, 345, 321]
 KevinDurant_FTA = [256, 256, 448, 524, 840, 675, 501, 750, 805, 171]
 DerrickRose_FTA = [205, 205, 205, 250, 338, 555, 239, 0, 32, 187]
 DwayneWade_FTA = [803, 535, 467, 771, 702, 652, 297, 425, 258, 370]
+
+Free_Throw_Attempts = np.array([KobeBryant_FTA, JoeJohnson_FTA, LeBronJames_FTA, CarmeloAnthony_FTA, DwightHoward_FTA, ChrisBosh_FTA,
+                   ChrisPaul_FT, KevinDurant_FTA, DerrickRose_FTA, DwayneWade_FTA])
