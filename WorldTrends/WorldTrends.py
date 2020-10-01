@@ -36,4 +36,7 @@ stats.columns = ['CountryName', 'CountryCode', 'BirthRate', 'InternetUsers',
 
 # filtering dataframe, by rows
 filter_ = stats.BirthRate > 30
-print(stats[filter_].to_string())
+filter_2 = stats.IncomeGroup == "Low income"
+# filter_3 = filter_ and filter_2  # this causes error since it's a series instead of single value
+filter_3 = filter_ & filter_2  # this will do the filtering element by element
+print(stats[filter_3])
