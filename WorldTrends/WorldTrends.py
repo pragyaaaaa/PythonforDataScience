@@ -25,11 +25,15 @@ stats.columns = ['CountryName', 'CountryCode', 'BirthRate', 'InternetUsers',
 # print(stats[['CountryName', 'BirthRate']][4:19].to_string())
 
 # add column to dataframe
-stats['temp_column'] = stats.BirthRate * stats.InternetUsers
-print(stats.temp_column.head())
-print(stats.columns)
+# stats['temp_column'] = stats.BirthRate * stats.InternetUsers
+# print(stats.temp_column.head())
+# print(stats.columns)
 
 # removing a column
-stats = stats.drop('temp_column',
-                   axis=1)  # doesn't modify stats, creates a new object that's why we need to override our dataframe
-print(stats.columns)
+# stats = stats.drop('temp_column',
+#                  axis=1)  # doesn't modify stats, creates a new object that's why we need to override our dataframe
+# print(stats.columns)
+
+# filtering dataframe, by rows
+filter_ = stats.BirthRate > 30
+print(stats[filter_].to_string())
