@@ -27,3 +27,9 @@ stats.columns = ['CountryName', 'CountryCode', 'BirthRate', 'InternetUsers',
 # add column to dataframe
 stats['temp_column'] = stats.BirthRate * stats.InternetUsers
 print(stats.temp_column.head())
+print(stats.columns)
+
+# removing a column
+stats = stats.drop('temp_column',
+                   axis=1)  # doesn't modify stats, creates a new object that's why we need to override our dataframe
+print(stats.columns)
