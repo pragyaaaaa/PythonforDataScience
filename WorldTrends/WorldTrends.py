@@ -19,5 +19,7 @@ stats.columns = ['CountryName', 'CountryCode', 'BirthRate', 'InternetUsers',
 # slicing rows: by default
 # print(stats[::-1].to_string())  # reversed
 # slicing columns
-print(stats[['CountryName', 'BirthRate']].head())  # passing 'list' of columns we want to slice to dataframe
-print(stats.BirthRate)  # quick access to columns if column name is one word
+# print(stats[['CountryName', 'BirthRate']].head())  # passing 'list' of columns we want to slice to dataframe
+# print(stats.BirthRate)  # quick access to columns if column name is one word
+# combining rows and column slicing
+# print(stats[['CountryName', 'BirthRate']][4:19].to_string())
