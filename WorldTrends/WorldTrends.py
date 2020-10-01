@@ -15,7 +15,7 @@ stats.columns = ['CountryName', 'CountryCode', 'BirthRate', 'InternetUsers',
                  'IncomeGroup']
 # print(stats.columns)
 
-# subsetting dataframes in Pandas- by rows, columns and combining both
+# sub-setting dataframes in Pandas- by rows, columns and combining both
 # slicing rows: by default
 # print(stats[::-1].to_string())  # reversed
 # slicing columns
@@ -23,3 +23,7 @@ stats.columns = ['CountryName', 'CountryCode', 'BirthRate', 'InternetUsers',
 # print(stats.BirthRate)  # quick access to columns if column name is one word
 # combining rows and column slicing
 # print(stats[['CountryName', 'BirthRate']][4:19].to_string())
+
+# add column to dataframe
+stats['temp_column'] = stats.BirthRate * stats.InternetUsers
+print(stats.temp_column.head())
